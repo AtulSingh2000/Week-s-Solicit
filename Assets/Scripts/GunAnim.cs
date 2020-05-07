@@ -23,23 +23,19 @@ public class GunAnim : MonoBehaviour
     private float startAnimOffset = 0;
 
 
-    /**
-     * Awake
-     */
+   
     void Awake()
     {
         origPos = transform.position;
         origRot = transform.eulerAngles;
         origScale = transform.localScale;
-        startAnimOffset = Random.Range(0f, 540f);        // so that the xyz anims are already offset from each other since the start
+        startAnimOffset = Random.Range(0f, 540f);      
     }
 
-    /**
-     * Update
-     */
+   
     void Update()
     {
-        /* position */
+       
         if (animPos)
         {
             Vector3 pos;
@@ -49,7 +45,7 @@ public class GunAnim : MonoBehaviour
             transform.position = pos;
         }
 
-        /* rotation */
+      
         if (animRot)
         {
             Vector3 rot;
@@ -59,7 +55,7 @@ public class GunAnim : MonoBehaviour
             transform.eulerAngles = rot;
         }
 
-        /* scale */
+       
         if (animScale)
         {
             Vector3 scale;
